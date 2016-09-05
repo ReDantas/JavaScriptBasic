@@ -1,0 +1,32 @@
+
+<h1>If and Else</h1>
+<p>simple test: 3 > 2</p>
+<script>
+  if(3 > 2){
+    document.write("true");
+  }else{
+    document.write("false");
+  }
+</script>
+<br>
+<strong>Calculator (if and else)</strong>
+<script>
+  function  calculator(a,b,op) {
+      if(op == "+"){
+        return  a + b;
+      }else{
+        if(op == "-"){
+          return a - b;
+        }else {
+          if(op == "*"){
+            return a * b;
+          }else{
+            if(op == "/"){
+              return a / b;
+            }
+          }
+        }
+      }
+  }
+  document.write(calculator(10,4,"+"));
+</script>
