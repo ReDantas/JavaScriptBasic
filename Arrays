@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arrays</title>
+</head>
+<body>
+<h1>Arrays in JS</h1>
+<script>
+  /*
+   Fomas de criar um array
+   */
+  var array1 = new Array("red",10,20.4);
+  var array2 = Array("Blue",20,30.7,array1);
+  var array3 = ["orange",90,23.5,array1,array2];
+  /*
+   Imprime os dados do array1
+   */
+  document.write("<p> Array1: "+array1[0]+ "</p>");
+  document.write("<p> Array1: "+array1[1]+ "</p>");
+  document.write("<p> Array1: "+array1[2]+ "</p>");
+
+  /*
+   Imprime os do array2
+   */
+  document.write("<p> Array2: "+array2[0]+ "</p>");
+  document.write("<p> Array2: "+array2[1]+ "</p>");
+  document.write("<p> Array2: "+array2[2]+ "</p>");
+  document.write("<p> Array2: "+array2[3]+ "</p>");
+
+  /*
+   Imprime os do array3
+   */
+  document.write("<p> Array3: "+array3[0]+ "</p>");
+  document.write("<p> Array3: "+array3[1]+ "</p>");
+  document.write("<p> Array3: "+array3[2]+ "</p>");
+  document.write("<p> Array3: "+array3[3]+ "</p>");
+  document.write("<p> Array3: "+array3[4]+ "</p>");
+
+
+</script>
+<h1>Arrays Lenght in JS</h1>
+<script>
+  /*
+   Fomas de criar um array
+   */
+  var array1 = new Array("red",10,20.4);
+  var array2 = Array("Blue",20,30.7,array1);
+  var array3 = ["orange",90,23.5,array1,array2];
+  /*
+   Imprime os dados do array1
+   */
+  document.write("<p> Array1: "+array1.length+ "</p>");
+  document.write("<p> Array2: "+array2.length+ "</p>");
+  document.write("<p> Array3: "+array3.length+ "</p>");
+
+</script>
+
+<h1>Removing Elements</h1>
+<script>
+  /*
+   Imprime os dados do array1
+   */
+  array1.length = 2;
+
+  document.write("<p> Array1: "+array1[0]+ "</p>");
+  document.write("<p> Array1: "+array1[1]+ "</p>");
+  /*
+  Já não existe mais a posição 2
+   */
+  document.write("<p> Array1: "+array1[2]+ "</p>");
+
+</script>
+
+<h1>Array Methods</h1>
+<strong>Concat</strong>
+<script>
+//Concatena os array1 com o array2
+  array1 = array1.concat(array2);
+
+//Imprime o resultado do Concat
+
+  document.write("<p>Tamanho do Array1: "+array1.length+"</p>");
+
+//Detalha os dados do Concat e do Join
+  console.log("concat():");
+  console.log(array1);
+
+
+</script>
+<strong>Join</strong>
+<script>
+  //Cria variável utilizando o método Join
+  var list = array1.join(" | ");
+  //Imprime o resultado do Join
+  document.write("<p><b>Dados do Array1 em Lista: </b>"+list+"</p>");
+  console.log("join():");
+  console.log(list);
+</script>
+
+<strong>Pop</strong>
+<script>
+
+  //Remove o ultimo item ao array1
+  array1.pop();
+
+  //Imprime o resultado do Push
+
+  document.write("<p>"+ array1 +"</p>");
+  console.log("push():");
+  console.log(array1);
+
+</script>
+
+<strong>Push</strong>
+<script>
+
+  //Adiciona um item ao array1
+ array1.push("Push");
+
+  //Imprime o resultado do Push
+
+  document.write("<p>"+ array1 +"</p>");
+  console.log("push():");
+  console.log(array1);
+
+</script>
+
+<strong>Shift</strong>
+<script>
+
+
+  //Remove o primeiro item do array1
+  array1.shift();
+
+  //Imprime o resultado do Push
+
+  document.write("<p>"+ array1 +"</p>");
+  console.log("shift():");
+  console.log(array1);
+
+</script>
+
+<strong>UnShift</strong>
+<script>
+
+  //Adiciona o primeiro item do array1 index 0
+  array1.unshift("Unshift");
+
+  //Imprime o resultado
+
+  document.write("<p>"+ array1 +"</p>");
+  console.log("unshift():");
+  console.log(array1);
+
+</script>
+
+<strong>Slice</strong>
+<script>
+  //Remove dados de um array utilizando o index.
+  //Remove os idex de 1 ao 4.
+  array1 = array1.slice(1,4);
+  //Imprime o resultado
+
+  document.write("<p>"+ array1 +"</p>");
+  console.log("slice():");
+  console.log(array1);
+
+</script>
+
+<strong>Splice</strong>
+<script>
+  //Adiciona dados a um array, deletando informações antigas o index.
+  //Remove os idex de 1 e 2 e prenche com o descrito.
+  array1.splice(0,1,"A","B","C","50");
+  //Imprime o resultado
+
+  document.write("<p>"+ array1 +"</p>");
+  console.log("splice():");
+  console.log(array1);
+
+</script>
+
+<strong>Reverse</strong>
+<script>
+  //Altera a ordem de um array
+
+  array1.reverse();
+  //Imprime o resultado
+
+  document.write("<p>"+ array1 +"</p>");
+  console.log("reverse():");
+  console.log(array1);
+
+</script>
+
+<strong>Sort</strong>
+<script>
+  //Ordem um array
+
+  array1.sort();
+
+  //Imprime o resultado
+
+  document.write("<p>"+ array1 +"</p>");
+  console.log("reverse():");
+  console.log(array1);
+
+</script>
+
+<strong>Sort with callback</strong>
+<script>
+  //Cria função
+  function desc(a,b) {
+   if (a > b) {
+     return -1;
+   }
+     if (a < b) {
+       return 1
+     }
+     if (a == b){
+         return 0
+       }
+
+  }
+  //Ordem um array
+
+  array1.sort(desc);
+
+  //Imprime o resultado
+
+  document.write("<p>"+ array1 +"</p>");
+  console.log("reverse():");
+  console.log(array1);
+
+</script>
+
+
+<h1>Index of</h1>
+<strong>indexof()</strong>
+<script>
+  //Retorna o index de um texto
+  //Caso não exista, retona -1
+ var array1 = new Array("orange","blue","red","blue","green");
+  var ret = array1.indexOf("blue");
+
+  //Imprime o resultado do Concat
+
+  document.write("<p>Array1: "+array1+"</p>");
+  document.write("<p> Index de blue: "+ ret +"</p>")
+
+  //Detalha os dados do Concat e do Join
+  console.log("indexof():");
+  console.log(ret);
+
+
+</script>
+
+<strong>indexof(searchElement[, from index])</strong>
+<script>
+  //Retorna o index de um texto
+  //Caso não exista, retona -1
+  var array1 = new Array("orange","blue","red","blue","green");
+  var ret = array1.indexOf("blue",2);
+
+  //Imprime o resultado do Concat
+
+  document.write("<p>Array1: "+array1+"</p>");
+  document.write("<p> Index de blue: "+ ret +"</p>")
+
+  //Detalha os dados do Concat e do Join
+  console.log("indexof():");
+  console.log(ret);
+
+
+</script>
+
+<strong>Lastindexof(searchElement[, from index])</strong>
+<script>
+  //Retorna o index de um texto buscando pelo index de trás para frente.
+  //Caso não exista, retona -1
+  var array1 = new Array("orange","blue","red","blue","green");
+  var ret = array1.lastIndexOf("blue");
+
+  //Imprime o resultado
+
+  document.write("<p>Array1: "+array1+"</p>");
+  document.write("<p> Index de blue: "+ ret +"</p>")
+
+  //Detalha os dados do Concat e do Join
+  console.log("lastindexof():");
+  console.log(ret);
+
+</script>
+
+<strong>Lastindexof(searchElement[, from index])</strong>
+<script>
+  //Retorna o index de um texto buscando pelo index de trás para frente a partir do 2 .
+  //Caso não exista, retona -1
+  var array1 = new Array("orange","blue","red","blue","green");
+  var ret = array1.lastIndexOf("blue",2);
+
+  //Imprime o resultado
+
+  document.write("<p>Array1: "+array1+"</p>");
+  document.write("<p> Index de blue: "+ ret +"</p>")
+
+  //Detalha os dados do Concat e do Join
+  console.log("lastindexof():");
+  console.log(ret);
+
+</script>
+
+<h1>Search in Practice</h1>
+<div>
+<input type="text" id="search">
+<button onclick="search();">Search</button>
+<br/>
+<strong>Result: </strong>
+<br/>
+<span id="result"></span>
+</div>
+<script>
+  var arrContent = ["a content of a blog","news of an article","recipe for a cake","programming tips"];
+
+  function search() {
+
+      var found = null;
+      var result = "";
+      var search = document.getElementById("search").value;
+      var arrResult =  new Array;
+
+      //percorre o array de conteudo
+      for(var key in arrContent){
+        //Separa as palavras usando espaço
+        var wordArray = arrContent[key].split(" ");
+          //percorre as palavras
+        for(var key2 in wordArray){
+            //Verifica se existe a palavra digitada no index de palavras
+            if(wordArray.indexOf(search) > -1 ){
+              //Se encontrar, verifica se ja foi encontrada, para nao repetir
+              if (found != key){
+                //Se nao for repetida guarda o index dessa palavra em uma variavel
+                found = key;
+                arrResult.push(arrContent[found]);
+              }
+
+           }
+        }
+
+      }
+    if (arrResult.length < 1){
+      result = "<p> Nao encontrado </p>";
+    }else{
+      for (var i in arrResult){
+        result += "<p>" + arrResult[i] + "</p>";
+      }
+
+    }
+    document.getElementById("result").innerHTML = result;
+  }
+
+</script>
+
+<h1>ForEach(callback[,thisObject])</h1>
+<script>
+
+arrContent.forEach(function (value,key) {
+  document.write("<p>Key: "+ key +" Value: "+value+"</p>");
+
+});
+
+</script>
+
+</body>
+</html>
